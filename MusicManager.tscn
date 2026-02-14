@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxbammjevsffl"]
+
+[ext_resource type="AudioStream" uid="uid://rtgbohaku064" path="res://Assets/sounds/Main Theme.mp3" id="1_7bbi8"]
+[ext_resource type="Script" uid="uid://cw6l5kf3u6xap" path="res://audio_stream_player.gd" id="2_y4juv"]
+
+[node name="Node" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_7bbi8")
+autoplay = true
+script = ExtResource("2_y4juv")

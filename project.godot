@@ -10,11 +10,16 @@ config_version=5
 
 [application]
 
-config/name="gasser lev 1"
-run/main_scene="uid://cyrjd4os6s63a"
+config/name="lost kids (Copy)"
+run/main_scene="uid://dwmxrtrvajjih"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
-[audio]
+[autoload]
 
-buses/default_bus_layout="res://buses/default_bus_layout.tres"
+MusicManager="*res://MusicManager.tscn"
+GameManager="*res://GameManager.gd"
+
+[display]
+
+window/stretch/mode="viewport"
