@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyj2bg1gl1q21"]
+
+[ext_resource type="Script" path="res://intro_cutscene.gd" id="1_lvalt"]
+[ext_resource type="VideoStream" uid="uid://d2glrvch46og8" path="res://Assets/videos/Intro Final.ogv" id="1_rlq26"]
+
+[node name="IntroCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lvalt")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_rlq26")
+autoplay = true
+expand = true
+
+[node name="Btn_Skip" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1028.0
+offset_top = 571.0
+offset_right = 1132.0
+offset_bottom = 631.0
+text = "Skip "
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="pressed" from="Btn_Skip" to="." method="_on_btn_skip_pressed"]
