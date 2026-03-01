@@ -26,6 +26,7 @@ expand = true
 [node name="Btn_Skip" type="Button" parent="."]
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 layout_mode = 0
 offset_left = 1028.0
 offset_top = 571.0
@@ -33,6 +34,8 @@ offset_right = 1132.0
 offset_bottom = 631.0
 text = "Skip "
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 layout_mode = 1
@@ -49,6 +52,9 @@ grow_horizontal = 0
 grow_vertical = 0
 text = "Skip"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
