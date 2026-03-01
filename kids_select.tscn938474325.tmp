@@ -1,0 +1,103 @@
+[gd_scene load_steps=6 format=3 uid="uid://vnsjwxrreuta"]
+
+[ext_resource type="Texture2D" uid="uid://bperfjfx7el3w" path="res://Assets/33.png" id="1_7yfdc"]
+[ext_resource type="Script" uid="uid://wr4lkbeu2r1i" path="res://kids_select.gd" id="1_i0537"]
+[ext_resource type="VideoStream" uid="uid://dfnu0gkxo2adh" path="res://Assets/videos/fares.ogv" id="2_i0537"]
+[ext_resource type="VideoStream" uid="uid://cs0utw7wlriyg" path="res://Assets/videos/3.ogv" id="4_r8aj2"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_r8aj2"]
+blend_mode = 1
+
+[node name="KidsSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i0537")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7yfdc")
+expand_mode = 5
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.335
+anchor_right = 0.64100003
+anchor_bottom = 0.59900004
+offset_left = 0.07998657
+offset_right = -0.43200684
+offset_bottom = -0.15203857
+stream = ExtResource("2_i0537")
+expand = true
+loop = true
+
+[node name="VideoStreamPlayer2" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.335
+anchor_right = 0.64100003
+anchor_bottom = 0.59900004
+offset_left = 0.07998657
+offset_right = -0.43200684
+offset_bottom = -0.15203857
+stream = ExtResource("2_i0537")
+expand = true
+loop = true
+
+[node name="VideoStreamPlayer3" type="VideoStreamPlayer" parent="."]
+material = SubResource("CanvasItemMaterial_r8aj2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("4_r8aj2")
+expand = true
+loop = true
+
+[node name="Btn_Kid1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 406.0
+offset_right = 426.0
+offset_bottom = 552.0
+flat = true
+
+[node name="Btn_Kid2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 406.0
+offset_right = 649.0
+offset_bottom = 551.0
+flat = true
+
+[node name="Btn_Kid3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 406.0
+offset_right = 856.0
+offset_bottom = 543.0
+flat = true
+
+[node name="Btn_Video" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 29.0
+offset_right = 708.0
+offset_bottom = 324.0
+flat = true
+
+[connection signal="pressed" from="Btn_Kid1" to="." method="_on_btn_kid_1_pressed"]
+[connection signal="pressed" from="Btn_Kid2" to="." method="_on_btn_kid_2_pressed"]
+[connection signal="pressed" from="Btn_Kid3" to="." method="_on_btn_kid_3_pressed"]
+[connection signal="pressed" from="Btn_Video" to="." method="_on_btn_video_pressed"]

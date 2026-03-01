@@ -1,18 +1,23 @@
 extends Control
 
-func _ready():
-	# 1. نتأكد إن فيديو التحميل شغال
-	$VideoStreamPlayer.play()
+func _load_level():
+
 	
-	# 2. اللعبة "بتمثل" إنها بتحمل (نستنى 4 ثواني مثلاً)
-	# (ده الوقت اللي هيتعرض فيه فيديو الظلال الزرقاء)
-	await get_tree().create_timer(4.0).timeout
-	
-	# 3. نشوف المخ حافظ مين، وننقل على الليفل بتاعه
-	if GameManager.player_choice == "KIDS":
-		get_tree().change_scene_to_file("res://scenes_kids/level 1 children pov.tscn")
+	if GameManager.player_choice == "WIZARD":
+		get_tree().change_scene_to_file("res://مسار_ليفل_الساحر_هنا.tscn")
 		
-	elif GameManager.player_choice == "WIZARD":
-		get_tree().change_scene_to_file("res://Scenes_Gasser/gassermap.tscn")
+	# --- ليفلات الأطفال التلاتة ---
+	
+	elif GameManager.player_choice == "KID_1":
+		# الولد الأول
+		get_tree().change_scene_to_file("res://مسار_ليفل_الولد_الأول.tscn")
+		
+	elif GameManager.player_choice == "KID_2":
+		# الولد التاني
+		get_tree().change_scene_to_file("res://مسار_ليفل_الولد_التاني.tscn")
+		
+	elif GameManager.player_choice == "KID_3":
+		# البنت الساحرة
+		get_tree().change_scene_to_file("res://مسار_ليفل_البنت.tscn")
 	
 	
