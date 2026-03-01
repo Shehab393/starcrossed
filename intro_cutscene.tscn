@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://y1r353by37fi"]
 
-[ext_resource type="Script" path="res://intro_cutscene.gd" id="1_lvalt"]
+[ext_resource type="Script" uid="uid://bwcgint51qhqu" path="res://intro_cutscene.gd" id="1_lvalt"]
 [ext_resource type="VideoStream" uid="uid://d2glrvch46og8" path="res://Assets/videos/Intro Final.ogv" id="1_rlq26"]
 
 [node name="IntroCutscene" type="Control"]
@@ -24,12 +24,28 @@ autoplay = true
 expand = true
 
 [node name="Btn_Skip" type="Button" parent="."]
+<<<<<<< Updated upstream
 layout_mode = 0
 offset_left = 1028.0
 offset_top = 571.0
 offset_right = 1132.0
 offset_bottom = 631.0
 text = "Skip "
+=======
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -54.0
+offset_right = -27.0
+offset_bottom = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Skip"
+>>>>>>> Stashed changes
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
 [connection signal="pressed" from="Btn_Skip" to="." method="_on_btn_skip_pressed"]
